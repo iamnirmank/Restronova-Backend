@@ -1,0 +1,5 @@
+Activate Virtual Environment: venv\Scripts\activate
+
+Generate API documentation: python manage.py generateschema --file openapi-schema.yml
+
+generate requirements.txt: pip freeze > requirements.txt

@@ -1,0 +1,1790 @@
+openapi: 3.0.2
+info:
+  title: ''
+  version: ''
+paths:
+  /api/AuthApp/api/user/:
+    get:
+      operationId: listUsers
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createUser
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - api
+  /api/AuthApp/api/user/{id}/:
+    get:
+      operationId: retrieveUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this user.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this user.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this user.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyUser
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this user.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/AuthApp/api/outlet/:
+    get:
+      operationId: listOutlets
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Outlet'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createOutlet
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Outlet'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Outlet'
+          description: ''
+      tags:
+      - api
+  /api/AuthApp/api/outlet/{outlet_code}/:
+    get:
+      operationId: retrieveOutlet
+      description: ''
+      parameters:
+      - name: outlet_code
+        in: path
+        required: true
+        description: A unique value identifying this outlet.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Outlet'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateOutlet
+      description: ''
+      parameters:
+      - name: outlet_code
+        in: path
+        required: true
+        description: A unique value identifying this outlet.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Outlet'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Outlet'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateOutlet
+      description: ''
+      parameters:
+      - name: outlet_code
+        in: path
+        required: true
+        description: A unique value identifying this outlet.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Outlet'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Outlet'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyOutlet
+      description: ''
+      parameters:
+      - name: outlet_code
+        in: path
+        required: true
+        description: A unique value identifying this outlet.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/raw_materials/:
+    get:
+      operationId: listRawMaterials
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RawMaterials'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createRawMaterials
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RawMaterials'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterials'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/raw_materials/{id}/:
+    get:
+      operationId: retrieveRawMaterials
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this raw materials.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterials'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateRawMaterials
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this raw materials.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RawMaterials'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterials'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateRawMaterials
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this raw materials.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RawMaterials'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterials'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyRawMaterials
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this raw materials.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/vendors/:
+    get:
+      operationId: listVendors
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Vendor'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createVendor
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vendor'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vendor'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/vendors/{id}/:
+    get:
+      operationId: retrieveVendor
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this vendor.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vendor'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateVendor
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this vendor.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vendor'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vendor'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateVendor
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this vendor.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vendor'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vendor'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyVendor
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this vendor.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/inventory/:
+    get:
+      operationId: listInventorys
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Inventory'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createInventory
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Inventory'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/inventory/get_inventory_summary/:
+    get:
+      operationId: getInventorySummaryInventory
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/inventory/{id}/:
+    get:
+      operationId: retrieveInventory
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this inventory.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateInventory
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this inventory.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Inventory'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateInventory
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this inventory.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Inventory'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyInventory
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this inventory.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/raw_material_orders/:
+    get:
+      operationId: listRawMaterialOrders
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RawMaterialOrders'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createRawMaterialOrders
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RawMaterialOrders'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterialOrders'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/raw_material_orders/{id}/:
+    get:
+      operationId: retrieveRawMaterialOrders
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique value identifying this raw material orders.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterialOrders'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateRawMaterialOrders
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique value identifying this raw material orders.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RawMaterialOrders'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterialOrders'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateRawMaterialOrders
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique value identifying this raw material orders.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RawMaterialOrders'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterialOrders'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyRawMaterialOrders
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique value identifying this raw material orders.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/products/:
+    get:
+      operationId: listProducts
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Products'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createProducts
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Products'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Products'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/products/{id}/:
+    get:
+      operationId: retrieveProducts
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this products.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Products'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateProducts
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this products.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Products'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Products'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateProducts
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this products.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Products'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Products'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyProducts
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this products.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/menu_items/:
+    get:
+      operationId: listMenuItems
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MenuItems'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createMenuItems
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MenuItems'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuItems'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/menu_items/{id}/:
+    get:
+      operationId: retrieveMenuItems
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this menu items.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuItems'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateMenuItems
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this menu items.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MenuItems'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuItems'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateMenuItems
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this menu items.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MenuItems'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuItems'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyMenuItems
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this menu items.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/sales/:
+    get:
+      operationId: listSales
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Sales'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createSales
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Sales'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sales'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/sales/{id}/:
+    get:
+      operationId: retrieveSales
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this sales.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sales'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateSales
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this sales.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Sales'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sales'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateSales
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this sales.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Sales'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sales'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroySales
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this sales.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/AuthApp/api/user/forget_password/:
+    post:
+      operationId: forgetPasswordUser
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - api
+  /api/AuthApp/api/user/login/:
+    post:
+      operationId: loginUser
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - api
+  /api/AuthApp/api/user/register/:
+    post:
+      operationId: registerUser
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - api
+  /api/AuthApp/api/user/reset_password/:
+    post:
+      operationId: resetPasswordUser
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - api
+  /api/AuthApp/api/user/verify_email/:
+    post:
+      operationId: verifyEmailUser
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/User'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/raw_materials/create_raw_material/:
+    post:
+      operationId: createRawMaterialRawMaterials
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/RawMaterials'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/RawMaterials'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterials'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/vendors/create_vendor/:
+    post:
+      operationId: createVendorVendor
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Vendor'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Vendor'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vendor'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/inventory/create_inventory/:
+    post:
+      operationId: createInventoryInventory
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Inventory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Inventory'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/products/create_product/:
+    post:
+      operationId: createProductProducts
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Products'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Products'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Products'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/raw_materials/{id}/update_raw_material/:
+    put:
+      operationId: updateRawMaterialRawMaterials
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this raw materials.
+        schema:
+          type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/RawMaterials'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/RawMaterials'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterials'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/vendors/{id}/update_vendor/:
+    put:
+      operationId: updateVendorVendor
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this vendor.
+        schema:
+          type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Vendor'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Vendor'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vendor'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/inventory/{id}/update_inventory/:
+    put:
+      operationId: updateInventoryInventory
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this inventory.
+        schema:
+          type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Inventory'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Inventory'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/raw_material_orders/{id}/delete_all_raw_material_orders/:
+    put:
+      operationId: deleteAllRawMaterialOrdersRawMaterialOrders
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique value identifying this raw material orders.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RawMaterialOrders'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterialOrders'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/products/{id}/update_product/:
+    put:
+      operationId: updateProductProducts
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this products.
+        schema:
+          type: string
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              $ref: '#/components/schemas/Products'
+          application/x-www-form-urlencoded:
+            schema:
+              $ref: '#/components/schemas/Products'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Products'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/raw_materials/delete_all_raw_materials/:
+    delete:
+      operationId: deleteAllRawMaterialsRawMaterials
+      description: ''
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/raw_materials/{id}/delete_raw_materials/:
+    delete:
+      operationId: deleteRawMaterialsRawMaterials
+      description: ''
+      parameters:
+      - name: id
+        in: path
+        required: true
+        description: A unique integer value identifying this raw materials.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/vendors/delete_all_vendors/:
+    delete:
+      operationId: deleteAllVendorsVendor
+      description: ''
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/inventory/delete_all_inventories/:
+    delete:
+      operationId: deleteAllInventoriesInventory
+      description: ''
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/products/delete_all_products/:
+    delete:
+      operationId: deleteAllProductsProducts
+      description: ''
+      parameters: []
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        password:
+          type: string
+          maxLength: 128
+        last_login:
+          type: string
+          format: date-time
+          nullable: true
+        is_superuser:
+          type: boolean
+          description: Designates that this user has all permissions without explicitly
+            assigning them.
+        name:
+          type: string
+          maxLength: 255
+        contact_no:
+          type: string
+          maxLength: 20
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        address:
+          type: string
+          maxLength: 255
+        role:
+          type: string
+          maxLength: 255
+        verification_code:
+          type: string
+          nullable: true
+          maxLength: 6
+        is_verified:
+          type: boolean
+        password_reset_token:
+          type: string
+          nullable: true
+          maxLength: 32
+        password_reset_token_created_at:
+          type: string
+          format: date-time
+          nullable: true
+        outlet:
+          type: string
+          nullable: true
+        groups:
+          type: array
+          items:
+            type: integer
+          description: The groups this user belongs to. A user will get all permissions
+            granted to each of their groups.
+        user_permissions:
+          type: array
+          items:
+            type: integer
+          description: Specific permissions for this user.
+      required:
+      - password
+      - name
+      - contact_no
+      - email
+      - address
+      - role
+    Outlet:
+      type: object
+      properties:
+        outlet_code:
+          type: string
+          maxLength: 255
+        addresss:
+          type: string
+          maxLength: 255
+        contact_no:
+          type: string
+          maxLength: 20
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        subscription_token:
+          type: string
+          nullable: true
+          maxLength: 32
+      required:
+      - outlet_code
+      - addresss
+      - contact_no
+      - email
+    RawMaterials:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+        avatar:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 200
+          pattern: "^(?:[a-z0-9.+-]*)://(?:[^\\s:@/]+(?::[^\\s:@/]*)?@)?(?:(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)(?:\\\
+            .(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)){3}|\\[[0-9a-f:.]+\\\
+            ]|([a-z\xA1-\uFFFF0-9](?:[a-z\xA1-\uFFFF0-9-]{0,61}[a-z\xA1-\uFFFF0-9])?(?:\\\
+            .(?!-)[a-z\xA1-\uFFFF0-9-]{1,63}(?<!-))*\\.(?!-)(?:[a-z\xA1-\uFFFF-]{2,63}|xn--[a-z0-9]{1,59})(?<!-)\\\
+            .?|localhost))(?::[0-9]{1,5})?(?:[/?#][^\\s]*)?\\z"
+      required:
+      - name
+    Vendor:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+        contact_no:
+          type: string
+          maxLength: 20
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        address:
+          type: string
+          maxLength: 255
+        website:
+          type: string
+          nullable: true
+          maxLength: 255
+        avatar:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 200
+          pattern: "^(?:[a-z0-9.+-]*)://(?:[^\\s:@/]+(?::[^\\s:@/]*)?@)?(?:(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)(?:\\\
+            .(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)){3}|\\[[0-9a-f:.]+\\\
+            ]|([a-z\xA1-\uFFFF0-9](?:[a-z\xA1-\uFFFF0-9-]{0,61}[a-z\xA1-\uFFFF0-9])?(?:\\\
+            .(?!-)[a-z\xA1-\uFFFF0-9-]{1,63}(?<!-))*\\.(?!-)(?:[a-z\xA1-\uFFFF-]{2,63}|xn--[a-z0-9]{1,59})(?<!-)\\\
+            .?|localhost))(?::[0-9]{1,5})?(?:[/?#][^\\s]*)?\\z"
+        vendor_materials:
+          type: object
+          nullable: true
+        outlet:
+          type: string
+          nullable: true
+      required:
+      - name
+      - contact_no
+      - email
+      - address
+    Inventory:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        manufacturing_date:
+          type: string
+          format: date
+        expiry_date:
+          type: string
+          format: date
+        validation_period:
+          type: number
+        rate:
+          type: number
+        quantity:
+          type: number
+        total_cost:
+          type: number
+        document:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 200
+          pattern: "^(?:[a-z0-9.+-]*)://(?:[^\\s:@/]+(?::[^\\s:@/]*)?@)?(?:(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)(?:\\\
+            .(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)){3}|\\[[0-9a-f:.]+\\\
+            ]|([a-z\xA1-\uFFFF0-9](?:[a-z\xA1-\uFFFF0-9-]{0,61}[a-z\xA1-\uFFFF0-9])?(?:\\\
+            .(?!-)[a-z\xA1-\uFFFF0-9-]{1,63}(?<!-))*\\.(?!-)(?:[a-z\xA1-\uFFFF-]{2,63}|xn--[a-z0-9]{1,59})(?<!-)\\\
+            .?|localhost))(?::[0-9]{1,5})?(?:[/?#][^\\s]*)?\\z"
+        total_quantity_remaining:
+          type: number
+        wastage:
+          type: number
+        created_at:
+          type: string
+          format: date-time
+          readOnly: true
+        updated_at:
+          type: string
+          format: date-time
+          readOnly: true
+        raw_material:
+          type: integer
+        vendor:
+          type: integer
+        outlet:
+          type: string
+          nullable: true
+      required:
+      - manufacturing_date
+      - expiry_date
+      - validation_period
+      - rate
+      - quantity
+      - total_cost
+      - raw_material
+      - vendor
+    RawMaterialOrders:
+      type: object
+      properties:
+        id:
+          type: string
+          readOnly: true
+        previouse_order_id:
+          type: string
+          nullable: true
+          maxLength: 100
+        order_date:
+          type: string
+          format: date
+        delivery_date:
+          type: string
+          format: date
+        rate:
+          type: number
+        quantity:
+          type: number
+        discount:
+          type: number
+        order_status:
+          type: string
+          maxLength: 100
+        order_trackings:
+          type: object
+          nullable: true
+        raw_material:
+          type: integer
+        vendor:
+          type: integer
+        outlet:
+          type: string
+          nullable: true
+      required:
+      - order_date
+      - delivery_date
+      - rate
+      - quantity
+      - discount
+      - order_status
+      - raw_material
+      - vendor
+    Products:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        name:
+          type: string
+          maxLength: 100
+        price:
+          type: number
+        quantity:
+          type: number
+        avatar:
+          type: string
+          format: uri
+          nullable: true
+          maxLength: 200
+          pattern: "^(?:[a-z0-9.+-]*)://(?:[^\\s:@/]+(?::[^\\s:@/]*)?@)?(?:(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)(?:\\\
+            .(?:0|25[0-5]|2[0-4][0-9]|1[0-9]?[0-9]?|[1-9][0-9]?)){3}|\\[[0-9a-f:.]+\\\
+            ]|([a-z\xA1-\uFFFF0-9](?:[a-z\xA1-\uFFFF0-9-]{0,61}[a-z\xA1-\uFFFF0-9])?(?:\\\
+            .(?!-)[a-z\xA1-\uFFFF0-9-]{1,63}(?<!-))*\\.(?!-)(?:[a-z\xA1-\uFFFF-]{2,63}|xn--[a-z0-9]{1,59})(?<!-)\\\
+            .?|localhost))(?::[0-9]{1,5})?(?:[/?#][^\\s]*)?\\z"
+        recipe_materials:
+          type: object
+          nullable: true
+      required:
+      - name
+      - price
+      - quantity
+    MenuItems:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        price:
+          type: number
+        quantity:
+          type: number
+        date:
+          type: string
+          format: date
+          readOnly: true
+        product:
+          type: integer
+        outlet:
+          type: string
+          nullable: true
+      required:
+      - price
+      - quantity
+      - product
+    Sales:
+      type: object
+      properties:
+        id:
+          type: integer
+          readOnly: true
+        date:
+          type: string
+          format: date-time
+          readOnly: true
+        quantity:
+          type: number
+        amount_received:
+          type: number
+        remarks:
+          type: string
+          maxLength: 100
+        menu_item:
+          type: integer
+        outlet:
+          type: string
+          nullable: true
+      required:
+      - quantity
+      - amount_received
+      - remarks
+      - menu_item
