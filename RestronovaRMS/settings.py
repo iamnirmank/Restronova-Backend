@@ -73,8 +73,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ.get('DJANGO_DB_NAME', 'postgres'),
-        'USER': os.environ.get('DJANGO_DB_USER', 'restronova'),
-        'PASSWORD': os.environ.get('DJANGO_DB_PASSWORD', 'Rms2024@'),
+        'USER': os.environ.get('DJANGO_DB_USER', 'Terraform'),
+        'PASSWORD': os.environ.get('DJANGO_DB_PASSWORD', 'Terraform2024@'),
         'HOST': os.environ.get('DJANGO_DB_HOST', 'restronova.postgres.database.azure.com'),
         'PORT': os.environ.get('DJANGO_DB_PORT', '5432'),
     }
