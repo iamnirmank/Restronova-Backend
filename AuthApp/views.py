@@ -2,8 +2,8 @@ from rest_framework import viewsets, status
 from rest_framework.decorators import action
 from django.utils import timezone
 from django.contrib.auth.hashers import make_password
-from .models import User, Outlet
-from .serializers import UserSerializer, OutletSerializer
+from .models import User, Outlet, Restaurant
+from .serializers import UserSerializer, OutletSerializer, RestaurantSerializer
 from .utils import get_user, jwt_encode_handler, generate_code, create_response, send_reset_email, send_verification_email
 
 
@@ -113,3 +113,9 @@ class UserViewSet(viewsets.ModelViewSet):
 class OutletViewSet(viewsets.ModelViewSet):
     queryset = Outlet.objects.all()
     serializer_class = OutletSerializer
+
+class RestaurantViewSet(viewsets.ModelViewSet):
+    queryset = Restaurant.objects.all()
+    serializer_class = RestaurantSerializer
+
+    

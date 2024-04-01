@@ -11,3 +11,8 @@ class OutletSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Outlet
         fields = '__all__'
+
+class RestaurantSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Restaurant
+        fields = '__all__'

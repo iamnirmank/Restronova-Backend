@@ -13,7 +13,7 @@ SECRET_KEY = "django-insecure-mic+=r5g_!g^oe)a*-tkiblimnvf2n5biew&!!kefj)8j$)mb!
 DEBUG = True  # Set this to False in production.
 
 # ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split()
-ALLOWED_HOSTS = ['restronovabackend.azurewebsites.net', 'localhost', "127.0.0.1", '127.0.0.1:5173']
+ALLOWED_HOSTS = ['djangoapp-69350.azurewebsites.net', 'localhost', "127.0.0.1", '127.0.0.1:5173']
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -68,14 +68,13 @@ TEMPLATES = [
     },
 ]
 
-# Database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ.get('DJANGO_DB_NAME', 'postgres'),
-        'USER': os.environ.get('DJANGO_DB_USER', 'Terraform'),
-        'PASSWORD': os.environ.get('DJANGO_DB_PASSWORD', 'Terraform2024@'),
-        'HOST': os.environ.get('DJANGO_DB_HOST', 'restronova.postgres.database.azure.com'),
+        'USER': os.environ.get('DJANGO_DB_USER', 'Terraform@mydjangoserver-69350.postgres.database.azure.com'),  
+        'PASSWORD': os.environ.get('DJANGO_DB_PASSWORD', 'Database2024'),
+        'HOST': os.environ.get('DJANGO_DB_HOST', 'mydjangoserver-69350.postgres.database.azure.com'),
         'PORT': os.environ.get('DJANGO_DB_PORT', '5432'),
     }
 }

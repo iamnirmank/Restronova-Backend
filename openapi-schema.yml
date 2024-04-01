@@ -237,6 +237,123 @@ paths:
           description: ''
       tags:
       - api
+  /api/AuthApp/api/restaurant/:
+    get:
+      operationId: listRestaurants
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Restaurant'
+          description: ''
+      tags:
+      - api
+    post:
+      operationId: createRestaurant
+      description: ''
+      parameters: []
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Restaurant'
+      responses:
+        '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Restaurant'
+          description: ''
+      tags:
+      - api
+  /api/AuthApp/api/restaurant/{restaurant_code}/:
+    get:
+      operationId: retrieveRestaurant
+      description: ''
+      parameters:
+      - name: restaurant_code
+        in: path
+        required: true
+        description: A unique value identifying this restaurant.
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Restaurant'
+          description: ''
+      tags:
+      - api
+    put:
+      operationId: updateRestaurant
+      description: ''
+      parameters:
+      - name: restaurant_code
+        in: path
+        required: true
+        description: A unique value identifying this restaurant.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Restaurant'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Restaurant'
+          description: ''
+      tags:
+      - api
+    patch:
+      operationId: partialUpdateRestaurant
+      description: ''
+      parameters:
+      - name: restaurant_code
+        in: path
+        required: true
+        description: A unique value identifying this restaurant.
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Restaurant'
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Restaurant'
+          description: ''
+      tags:
+      - api
+    delete:
+      operationId: destroyRestaurant
+      description: ''
+      parameters:
+      - name: restaurant_code
+        in: path
+        required: true
+        description: A unique value identifying this restaurant.
+        schema:
+          type: string
+      responses:
+        '204':
+          description: ''
+      tags:
+      - api
   /api/InventoryApp/raw_materials/:
     get:
       operationId: listRawMaterials
@@ -264,6 +381,20 @@ paths:
               $ref: '#/components/schemas/RawMaterials'
       responses:
         '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterials'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/raw_materials/get_all_raw_materials/:
+    get:
+      operationId: getAllRawMaterialsRawMaterials
+      description: ''
+      parameters: []
+      responses:
+        '200':
           content:
             application/json:
               schema:
@@ -388,6 +519,20 @@ paths:
           description: ''
       tags:
       - api
+  /api/InventoryApp/vendors/get_all_vendors/:
+    get:
+      operationId: getAllVendorsVendor
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vendor'
+          description: ''
+      tags:
+      - api
   /api/InventoryApp/vendors/{id}/:
     get:
       operationId: retrieveVendor
@@ -498,6 +643,20 @@ paths:
               $ref: '#/components/schemas/Inventory'
       responses:
         '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Inventory'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/inventory/get_all_inventories/:
+    get:
+      operationId: getAllInventoriesInventory
+      description: ''
+      parameters: []
+      responses:
+        '200':
           content:
             application/json:
               schema:
@@ -636,6 +795,20 @@ paths:
           description: ''
       tags:
       - api
+  /api/InventoryApp/raw_material_orders/get_all_raw_materials_orders/:
+    get:
+      operationId: getAllRawMaterialsOrdersRawMaterialOrders
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RawMaterialOrders'
+          description: ''
+      tags:
+      - api
   /api/InventoryApp/raw_material_orders/{id}/:
     get:
       operationId: retrieveRawMaterialOrders
@@ -746,6 +919,20 @@ paths:
               $ref: '#/components/schemas/Products'
       responses:
         '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Products'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/products/get_all_products/:
+    get:
+      operationId: getAllProductsProducts
+      description: ''
+      parameters: []
+      responses:
+        '200':
           content:
             application/json:
               schema:
@@ -870,6 +1057,20 @@ paths:
           description: ''
       tags:
       - api
+  /api/InventoryApp/menu_items/get_all_menu_items/:
+    get:
+      operationId: getAllMenuItemsMenuItems
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MenuItems'
+          description: ''
+      tags:
+      - api
   /api/InventoryApp/menu_items/{id}/:
     get:
       operationId: retrieveMenuItems
@@ -980,6 +1181,20 @@ paths:
               $ref: '#/components/schemas/Sales'
       responses:
         '201':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Sales'
+          description: ''
+      tags:
+      - api
+  /api/InventoryApp/sales/get_all_sales/:
+    get:
+      operationId: getAllSalesSales
+      description: ''
+      parameters: []
+      responses:
+        '200':
           content:
             application/json:
               schema:
@@ -1461,15 +1676,12 @@ components:
           type: string
           format: date-time
           nullable: true
-        is_superuser:
-          type: boolean
-          description: Designates that this user has all permissions without explicitly
-            assigning them.
         name:
           type: string
           maxLength: 255
         contact_no:
           type: string
+          nullable: true
           maxLength: 20
         email:
           type: string
@@ -1477,15 +1689,21 @@ components:
           maxLength: 254
         address:
           type: string
+          nullable: true
           maxLength: 255
         role:
           type: string
+          nullable: true
           maxLength: 255
         verification_code:
           type: string
           nullable: true
           maxLength: 6
         is_verified:
+          type: boolean
+        is_staff:
+          type: boolean
+        is_superuser:
           type: boolean
         password_reset_token:
           type: string
@@ -1512,10 +1730,7 @@ components:
       required:
       - password
       - name
-      - contact_no
       - email
-      - address
-      - role
     Outlet:
       type: object
       properties:
@@ -1524,9 +1739,34 @@ components:
           maxLength: 255
         addresss:
           type: string
+          nullable: true
           maxLength: 255
         contact_no:
           type: string
+          nullable: true
+          maxLength: 20
+        email:
+          type: string
+          format: email
+          maxLength: 254
+        restaurant:
+          type: string
+          nullable: true
+      required:
+      - outlet_code
+      - email
+    Restaurant:
+      type: object
+      properties:
+        restaurant_code:
+          type: string
+          maxLength: 255
+        name:
+          type: string
+          maxLength: 255
+        contact_no:
+          type: string
+          nullable: true
           maxLength: 20
         email:
           type: string
@@ -1537,9 +1777,8 @@ components:
           nullable: true
           maxLength: 32
       required:
-      - outlet_code
-      - addresss
-      - contact_no
+      - restaurant_code
+      - name
       - email
     RawMaterials:
       type: object
@@ -1560,6 +1799,9 @@ components:
             ]|([a-z\xA1-\uFFFF0-9](?:[a-z\xA1-\uFFFF0-9-]{0,61}[a-z\xA1-\uFFFF0-9])?(?:\\\
             .(?!-)[a-z\xA1-\uFFFF0-9-]{1,63}(?<!-))*\\.(?!-)(?:[a-z\xA1-\uFFFF-]{2,63}|xn--[a-z0-9]{1,59})(?<!-)\\\
             .?|localhost))(?::[0-9]{1,5})?(?:[/?#][^\\s]*)?\\z"
+        outlet:
+          type: string
+          nullable: true
       required:
       - name
     Vendor:
@@ -1573,6 +1815,7 @@ components:
           maxLength: 100
         contact_no:
           type: string
+          nullable: true
           maxLength: 20
         email:
           type: string
@@ -1580,6 +1823,7 @@ components:
           maxLength: 254
         address:
           type: string
+          nullable: true
           maxLength: 255
         website:
           type: string
@@ -1603,9 +1847,7 @@ components:
           nullable: true
       required:
       - name
-      - contact_no
       - email
-      - address
     Inventory:
       type: object
       properties:
@@ -1615,11 +1857,14 @@ components:
         manufacturing_date:
           type: string
           format: date
+          nullable: true
         expiry_date:
           type: string
           format: date
+          nullable: true
         validation_period:
           type: number
+          nullable: true
         rate:
           type: number
         quantity:
@@ -1656,9 +1901,6 @@ components:
           type: string
           nullable: true
       required:
-      - manufacturing_date
-      - expiry_date
-      - validation_period
       - rate
       - quantity
       - total_cost
@@ -1677,9 +1919,11 @@ components:
         order_date:
           type: string
           format: date
+          nullable: true
         delivery_date:
           type: string
           format: date
+          nullable: true
         rate:
           type: number
         quantity:
@@ -1700,11 +1944,8 @@ components:
           type: string
           nullable: true
       required:
-      - order_date
-      - delivery_date
       - rate
       - quantity
-      - discount
       - order_status
       - raw_material
       - vendor
@@ -1733,6 +1974,9 @@ components:
             .?|localhost))(?::[0-9]{1,5})?(?:[/?#][^\\s]*)?\\z"
         recipe_materials:
           type: object
+          nullable: true
+        outlet:
+          type: string
           nullable: true
       required:
       - name
@@ -1777,6 +2021,7 @@ components:
           type: number
         remarks:
           type: string
+          nullable: true
           maxLength: 100
         menu_item:
           type: integer
@@ -1786,5 +2031,4 @@ components:
       required:
       - quantity
       - amount_received
-      - remarks
       - menu_item

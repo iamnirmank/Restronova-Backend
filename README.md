@@ -45,3 +45,4 @@ python manage.py collectstatic
 
 ## Scheduling Background Tasks
 Learn How to schedule and execute background tasks in a Django application: _https://www.linkedin.com/pulse/how-schedule-execute-background-tasks-django-aimen-dahmani-frize/_
+
