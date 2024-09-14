@@ -2,6 +2,17 @@
 
 Welcome to the project! Below is a step-by-step guide to help you set up your Django environment, manage migrations, generate API documentation, install dependencies, and schedule background tasks.
 
+## Frontend URL
+
+```
+https://icy-ground-09906510f.5.azurestaticapps.net
+```
+## Frontend Login Credentials
+```
+Username: work.restronova@gmail.com
+Password: Restronova2024@
+```
+
 ## Create and Activate Virtual Environment
 
 ```

@@ -85,10 +85,8 @@ CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://restronovarms.vercel.app',
-    'https://inventoryappbackend.azurewebsites.net',
+    'https://icy-ground-09906510f.5.azurestaticapps.net',
     'http://127.0.0.1:5173',
-    'https://restronova.capitechnepal.com',
 ]
 CORS_ALLOW_METHODS = [
     'GET',
