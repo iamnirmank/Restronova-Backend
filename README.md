@@ -5,7 +5,7 @@ Welcome to the project! Below is a step-by-step guide to help you set up your Dj
 ## Create and Activate Virtual Environment
 
 ```
-python -m venv venv
+python3 -m venv venv
 ```
 
 ## Activate virtual environment

@@ -71,11 +71,11 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DJANGO_DB_NAME', 'postgres'),
-        'USER': os.environ.get('DJANGO_DB_USER', 'Terraform@mydjangoserver-69350.postgres.database.azure.com'),  
-        'PASSWORD': os.environ.get('DJANGO_DB_PASSWORD', 'Database2024'),
-        'HOST': os.environ.get('DJANGO_DB_HOST', 'mydjangoserver-69350.postgres.database.azure.com'),
-        'PORT': os.environ.get('DJANGO_DB_PORT', '5432'),
+        'NAME': 'restronova',
+        'USER': 'paiaiuser',
+        'PASSWORD': 'Paai2024@',
+        'HOST': 'paaiserver.postgres.database.azure.com',
+        'PORT': '5432',
     }
 }
 
