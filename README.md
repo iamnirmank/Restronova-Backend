@@ -37,7 +37,7 @@ python manage.py generateschema --file openapi-schema.yml
 ```
 ## Run the Project
 ```
-python manage.py runserver
+daphne -b 0.0.0.0 -p 8000 RestronovaRMS.asgi:application
 ```
 ## Generate requirements.txt
 ```
